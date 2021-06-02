@@ -65,11 +65,17 @@ nav
     text-align: center;
     height: 40px;
 }
-
+a#active
+{
+    background-color: #cf631b;
+    color: white;
+}
 @media (max-width: 940px){
     .mlogo
     {
         margin: 20px;
+        padding: 20px;
+        padding-right: 10px;
     }
     img{
         width: 220px;
@@ -116,7 +122,7 @@ nav
         height: 2px;
         background: white;
         transform: translateY(5px);
-        transition: 0.2s;
+        transition: 0.5s;
     }
     #toggle.active::before{
         transform: translateY(0px) rotate(45deg);
@@ -126,12 +132,16 @@ nav
     }
     #navbar
     {
-        background-color: white;
+        background: white;
+        position: absolute;
+        top: -1000;
+        width: 85%;
         height: 0px;
         display: block;
-        border-radius: 0px 0px 10px 10px;
+        border-radius: 10px 10px;
         margin: -10 0;
-        transition: 0.2s;
+        transition: 0.5s;
+        box-shadow: 7px 0px 5px -3px rgba(47,47,47,0.5), 0px 8px 7px -3px rgba(47,47,47,0.5), -7px 0px 5px -3px rgba(47,47,47,0.5);
     }
     #navbar li{
         display: block;
@@ -141,5 +151,15 @@ nav
     #navbar.active
     {
         height: 350px;
+        display: block;
+        top: 295px;
+    }
+    a#active
+    {
+        background-color: rgb(40, 95, 49);
+        padding: 0 20px;
+    }
+    div#content{
+        font-size: 18px;
     }
 }
